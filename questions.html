@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generated MCQs</title>
+</head>
+<body>
+    <h1 style="font-family: Arial, sans-serif; color: #333;">Generated MCQs</h1>
+    <ul style="list-style-type: none; padding-left: 0;">
+        {% for question, options, answer in questions %}
+            <li style="margin-bottom: 20px; border: 1px solid #ccc; padding: 10px;">
+                <p style="font-weight: bold;">{{ question }}</p>
+                <ol style="list-style-type: lower-alpha; padding-left: 0;">
+                    {% for option in options %}
+                        <li style="margin-left: 20px;">{{ option }}</li>
+                    {% endfor %}
+                </ol>
+                <p style="font-style: italic; color: #666;">Correct answer is: ({{ answer }})</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

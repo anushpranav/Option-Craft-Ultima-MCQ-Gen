@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - QuizzyBee</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #282828; /* Same background color as the first page */
+            height: 100vh; /* Full viewport height */
+            display: flex; /* Center content vertically */
+            justify-content: center; /* Center content horizontally */
+            align-items: center; /* Center content vertically */
+            margin: 0; /* Remove default margin */
+        }
+        .container {
+            text-align: center;
+            padding: 20px; /* Adjusted padding to make the dialog box smaller */
+            max-width: 350px; /* Increase the maximum width of the dialog box */
+            background-color: #f8f9fa; /* Light gray background */
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Shadow effect */
+        }
+        .form-group {
+            margin-bottom: 15px; /* Reduced margin bottom */
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        <form id="login-form" action="login.html" method="post">
+            <div class="form-group">
+                <input type="text" class="form-control" id="usernameOrEmail" name="usernameOrEmail" placeholder="Username or Email" required>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Login</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Get form input values
+            const usernameOrEmail = document.getElementById('usernameOrEmail').value;
+            const password = document.getElementById('password').value;
+
+            // Redirect to dashboard page after form submission
+            window.location.href = 'dashboard.html';
+        });
+    </script>
+</body>
+</html>

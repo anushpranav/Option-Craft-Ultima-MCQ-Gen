@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPTIONCRAFT ULTIMA</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #3e3e3eb5; /* Pure, rich, shiny orange */
+            height: 100vh; /* Full viewport height */
+            display: flex; /* Center content vertically */
+            justify-content: center; /* Center content horizontally */
+            align-items: center; /* Center content vertically */
+            margin: 0; /* Remove default margin */
+            flex-direction: column; /* Align items in a column */
+        }
+        .container {
+            text-align: center;
+        }
+        h1 {
+            font-family: 'Luminari',  fantasy; /* Change font to Times New Roman */
+            color: #ffffff; /* White text color */
+        }
+        .logo {
+            max-width: 200px;
+            opacity: 0; /* Initially hide the logo */
+            animation: fadeIn 2s ease forwards; /* Fade in animation */
+        }
+        .slogan {
+            color: white; /* White text color */
+            font-family: cursive; /* Cursive font style */
+            font-size: 28px; /* Adjust font size */
+        }
+        .btn {
+            margin-top: 20px; /* Add margin to the buttons */
+            padding: 10px 20px; /* Add padding to the buttons */
+            font-size: 18px; /* Adjust font size of buttons */
+            text-decoration: none; /* Remove underline from buttons */
+            color: white; /* White text color */
+            background-color: #007bff; /* Blue color for buttons */
+            border: none; /* Remove border from buttons */
+            border-radius: 5px; /* Add border radius to buttons */
+            cursor: pointer; /* Change cursor to pointer on hover */
+        }
+        .btn-secondary {
+            background-color: #6c757d; /* Gray color for secondary button */
+            margin-left: 10px; /* Add margin to separate buttons */
+        }
+        .btn:hover {
+            opacity: 0.8; /* Reduce opacity on hover */
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .quotes {
+            margin-top: 50px; /* Add margin to the quotes */
+            color: #fff; /* White text color */
+            font-style: italic; /* Italicize the quotes */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <centre><h1>
+            <span class="word">OPTION CRAFT<span class="superscript"></span> </span>
+            <span class="word">ULTIMA!</span>
+          </h1></centre>
+        <br>
+        <img src="static/oculogo.png" class="logo" alt="Logo"> <!-- Specify the path to the logo image directly -->
+        <br>
+        <br>
+        <p class="slogan">Your Friendly MCQ Generator</p>   
+    </div>
+    <script>
+        setTimeout(function() {
+            document.body.innerHTML += `<a href="signup" class="btn">Sign Up</a>
+                                         <a href="login" class="btn btn-secondary">Login</a>`; // Add signup/login buttons
+        }, 4000); // 3000 milliseconds (3 seconds) delay
+    </script>
+    
+    <div class="quotes">
+        <p>"In the world of MCQs, every option crafted is a possibility explored."</p>
+    </div>
+</body>
+</html>
